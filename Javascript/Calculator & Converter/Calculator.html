@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<link href="css/Style.css" rel="stylesheet" type="text/css">
+
+<head>
+  <title> Having fun with js version 2 </title>
+  <script type="text/javascript" src="JS/script.js"></script>
+</head>
+
+
+<body>
+
+  <div class="mainbody">
+
+    <h1 id="head1">Main Heading 1</h1>
+
+    <img id="img1" src="Images/img1.jpg">
+
+    <p id="para1">Iste massa? Interdum, rerum, quasi euismod maxime tempor, ullam minim eius hac. Suscipit. Cupidatat, qui etiam omnis, commodo eu tempora ipsam, habitant unde suspendisse do pede adipisicing explicabo, incidunt elementum? Nisi, aliquid, congue doloremque!
+      Tenetur quod dui cupidatat corrupti fugiat? Officia fugit rerum, accumsan vivamus! Laborum quas. Possimus! Tenetur facere dis? Luctus repellendus consectetuer, fermentum? Libero nulla nobis repudiandae placerat occaecat perferendis doloribus sodales
+      nec wisi ipsa semper earum cubilia incidunt maxime fringilla porttitor massa, sapiente officiis, nunc? Nullam pretium. Sodales dictum lorem sagittis ante cumque nonummy. Etiam. Error quae, veniam? Quibusdam commodo natus quisquam felis. Convallis
+      beatae? Litora fringilla.</p>
+
+    <div id="Clicker">
+
+      <button type="button" onclick="myFunction()">Count!</button>
+
+      <p id="counter">0</p>
+
+    </div>
+
+    <h2 id="head2">Main Heading 2</h2>
+
+    <img id="img2" src="Images/img2.png">
+    <div id="bgcolor">
+</div>
+    <p id="para2">Iste massa? Interdum, rerum, quasi euismod maxime tempor, ullam minim eius hac. Suscipit. Cupidatat, qui etiam omnis, commodo eu tempora ipsam, habitant unde suspendisse do pede adipisicing explicabo, incidunt elementum? Nisi, aliquid, congue doloremque!
+      Tenetur quod dui cupidatat corrupti fugiat? Officia fugit rerum, accumsan vivamus! Laborum quas. Possimus! Tenetur facere dis? Luctus repellendus consectetuer, fermentum? Libero nulla nobis repudiandae placerat occaecat perferendis doloribus sodales
+      nec wisi ipsa semper earum cubilia incidunt maxime fringilla porttitor massa, sapiente officiis, nunc? Nullam pretium. Sodales dictum lorem sagittis ante cumque nonummy. Etiam. Error quae, veniam? Quibusdam commodo natus quisquam felis. Convallis
+      beatae? Litora fringilla.</p>
+
+    <h3>Convert rands into dollars, euros, and pounds</h3>
+    <div class="converterid">
+
+      <form name="converter">
+        <table border="0">
+          <tr> 
+            <td>Euro: </td>
+            <td><input type="text" name="euro" onchange="euroConverter()" /></td>
+          </tr>
+          <tr>
+            <td>US Dollar: </td>
+            <td><input type="text" name="dollar" onchange="dollarConverter()" /></td>
+          </tr>
+          <tr>
+            <td>British Pound:</td>
+            <td><input type="text" name="pound" onchange="poundConverter()" /></td>
+          </tr>
+          <tr>
+            <td>South African Rand: </td>
+            <td><input type="text" name="rand" onchange="randConverter()" /></td>
+          </tr>
+          <tr>
+            <td colspan="2" align="center"><input type="button" value="Convert!" /></td>
+          </tr>
+        </table>
+      </form>
+
+
+    </div>
+
+    <h2 id="head3">Main Heading 3</h2>
+
+    <p id="para3">Iste massa? Interdum, rerum, quasi euismod maxime tempor, ullam minim eius hac. Suscipit. Cupidatat, qui etiam omnis, commodo eu tempora ipsam, habitant unde suspendisse do pede adipisicing explicabo, incidunt elementum? Nisi, aliquid, congue doloremque!
+      Tenetur quod dui cupidatat corrupti fugiat? Officia fugit rerum, accumsan vivamus! Laborum quas. Possimus! Tenetur facere dis? Luctus repellendus consectetuer, fermentum? Libero nulla nobis repudiandae placerat occaecat perferendis doloribus sodales
+      nec wisi ipsa semper earum cubilia incidunt maxime fringilla porttitor massa, sapiente officiis, nunc? Nullam pretium. Sodales dictum lorem sagittis ante cumque nonummy. Etiam. Error quae, veniam? Quibusdam commodo natus quisquam felis. Convallis
+      beatae? Litora fringilla.</p>
+
+    <h3>Calculator</h3>
+    <div class="calc">
+
+      <form name="calculator">
+        <table>
+          <tr>
+            <td colspan="4">
+              <input type="text" name="display" id="display" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+            <td><input type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+            <td><input type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+            <td><input type="button" class="operator" name="plus" value="+" onclick="calculator.display.value += '+'"></td>
+          </tr>
+          <tr>
+            <td><input type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+            <td><input type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+            <td><input type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+            <td><input type="button" class="operator" name="minus" value="-" onclick="calculator.display.value += '-'"></td>
+          </tr>
+          <tr>
+            <td><input type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+            <td><input type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+            <td><input type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></td>
+            <td><input type="button" class="operator" name="times" value="x" onclick="calculator.display.value += '*'"></td>
+          </tr>
+          <tr>
+            <td><input type="button" id="clear" name="clear" value="c" onclick="calculator.display.value = ''"></td>
+            <td><input type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+            <td><input type="button" name="doit" value="=" onclick="calculator.display.value = eval(calculator.display.value)"></td>
+            <td><input type="button" class="operator" name="div" value="/" onclick="calculator.display.value += '/'"></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+
+
+
+
+    <h2 id="head4">Main Heading 4</h2>
+
+    <p id="para4">Iste massa? Interdum, rerum, quasi euismod maxime tempor, ullam minim eius hac. Suscipit. Cupidatat, qui etiam omnis, commodo eu tempora ipsam, habitant unde suspendisse do pede adipisicing explicabo, incidunt elementum? Nisi, aliquid, congue doloremque!
+      Tenetur quod dui cupidatat corrupti fugiat? Officia fugit rerum, accumsan vivamus! Laborum quas. Possimus! Tenetur facere dis? Luctus repellendus consectetuer, fermentum? Libero nulla nobis repudiandae placerat occaecat perferendis doloribus sodales
+      nec wisi ipsa semper earum cubilia incidunt maxime fringilla porttitor massa, sapiente officiis, nunc? Nullam pretium. Sodales dictum lorem sagittis ante cumque nonummy. Etiam. Error quae, veniam? Quibusdam commodo natus quisquam felis. Convallis
+      beatae? Litora fringilla.</p>
+
+    <h3>Close Page</h3>
+
+    <div id="pageclose">
+
+      <button type="button" onclick="closewindow()">Close Window</button>
+
+
+    </div>
+
+  </div>
+  <script type="text/javascript" src="JS/script.js"></script>
+
+
+</body>
+
+
+
+</html>

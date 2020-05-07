@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Loops</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        #gamestatus {
+            background-color: green;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+
+        }
+
+        #gamestatus h3 {
+            padding: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h2>The App will guess how many fingers it is holding up</h2>
+            <select style="width: 280px" id="usernumber" name="Mobility">
+  <option selected="">Please Select a number</option>
+  <option value="0">0</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+
+</select>
+        <!--<input type="text" id="usernumber" placeholder="Choose between 1 - 5">-->
+        <button id="submit" >Submit</button>
+        <div id="gamestatus">
+            <h3>Game Status</h3>
+        </div>
+        <button id="clear" >clear</button>
+        <h4 id="appresult"></h4>
+    </div>
+            
+
+
+
+
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <script type="text/javascript">
+        var userinput = "";
+        var appchoice = new Array();
+        var appcurrent = ""
+        var appcounter = "";
+        var gamestart = false;
+        var record = "";
+
+        document.getElementById("clear").onclick = function () {
+        appcurrent = ""
+        appcounter = "";
+        gamestart = true;
+        record = "";
+        appchoice.length = 0;
+        document.getElementById("gamestatus").style.backgroundColor = "green";
+
+        document.getElementById("appresult").innerHTML = "";
+        }
+
+
+        document.getElementById("submit").onclick = function () {
+
+            userinput = document.getElementById("usernumber").value;
+            gamestart = true;
+            record = record + (document.getElementById("appresult").write = ("Userinput is: " + userinput + "<br>"));
+        
+            while (gamestart == true) {
+
+                appcurrent = Math.floor((Math.random() * 6));
+                record = record + (document.getElementById("appresult").write = ("The app choose: " + appcurrent + "<br>"));
+                appchoice.push(appcurrent);
+                appcounter++;
+                record = record + (document.getElementById("appresult").innerHTML = ("The App has tried to guess. <br>Currently on " + appcounter + " tries." + "<br>"));
+                
+            
+                if (appcurrent == userinput) {
+
+                    
+                    
+                    record = record + (document.getElementById("appresult").innerHTML = ("App has guessed correctly, it took " + appcounter + " tries... " + appchoice + "<br>"));
+                    gamestart = false;
+                    document.getElementById("gamestatus").style.backgroundColor = "red";
+                    break;
+                }
+                if(gamestart == false){
+                    break;
+                }
+            }
+            
+            
+        
+            document.getElementById("appresult").innerHTML = record;
+
+        }
+
+        
+
+
+
+
+
+        //document.getElementById("appresult").innerHTML = appcurrent
+    </script>
+</body>
+
+</html>
